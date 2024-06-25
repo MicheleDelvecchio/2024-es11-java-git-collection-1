@@ -57,6 +57,36 @@ public class DataHelper {
         return setList;
     }
 
+    // restituisce una lista di numeri casuali NON DUPLICATI compresi tra 0 e max
+    public static Set<Integer> getRandomUniqueInteger(int size, int max) {
+
+        Set<Integer> setList = new HashSet<>();
+        Random rnd = new Random();
+
+        for (int x = 0; x < size;) {
+            int numero = rnd.nextInt(max + 1);
+            if (setList.add(numero)) {
+                x++;
+            }
+        }
+        return setList;
+    }
+
+    // // restituisce una lista di numeri casuali NON DUPLICATI compresi tra min e max
+    public static Set<Integer> getRandomUniqueInteger(int size, int min, int max) {
+
+        Set<Integer> setList = new HashSet<>();
+        Random rnd = new Random();
+
+        for (int x = 0; x < size;) {
+            int numero = rnd.nextInt(min, (max + 1));
+            if (setList.add(numero)) {
+                x++;
+            }
+        }
+        return setList;
+    }
+
     // restituisce una mappa di frequenza di numeri interi
     // public static ??? getFrequencyMap(List<Integer> list) {
     //

@@ -41,6 +41,11 @@ public class App {
         Set<Integer> randomUnique = DataHelper.getRandomUniqueInteger(4);
         System.out.println(randomUnique);
 
+        Set<Integer> randomUniqueZeroMax = DataHelper.getRandomUniqueInteger(5, 10);
+        System.out.println(randomUniqueZeroMax);
+
+        Set<Integer> randomUniqueMinMax = DataHelper.getRandomUniqueInteger(5, 2, 7);
+        System.out.println(randomUniqueMinMax);
     }
 
 }
